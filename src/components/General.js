@@ -8,11 +8,7 @@ class General extends Component{
     super(props);
     this.state = {
       edit: false,
-      info: {
-        name: "",
-        email: "",
-        phone: "",
-      }
+      info: props.info 
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -37,14 +33,18 @@ class General extends Component{
     });
   }
   render(){
+    const { className, title } = this.props;
     return(
-      <div className="General">
+      <div className={className}>
         <SectionHeading 
-          title="General Information" 
+          title={title}
           handleClick={this.handleClick}
           button={(this.state.edit) ? "submit" : "edit"}
         />
-        <Info handleChange={this.handleChange} currentState={this.state} />
+        <Info handleChange={this.handleChange} 
+                     info={this.state.info} 
+                     edit={this.state.edit}
+        />
         <hr />
       </div>
     );

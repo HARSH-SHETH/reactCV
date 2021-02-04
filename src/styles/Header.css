@@ -16,6 +16,14 @@ body{
 }
 
 main{
+  width: 50%;
+  margin: auto;
+  padding: 3%;
+  margin-top: 1%;
+  overflow: hidden;
+  background: #3c3836;
+  border: none;
+  border-radius: 5px;
 }
 
 main h2{
@@ -25,5 +33,11 @@ main h2{
 main .edit{
   border: none;
   border-radius: 5px;
-  background-color: green; 
+  background-color: #cc241d; 
+}
+
+main .submit{
+  border: none;
+  border-radius: 5px;
+  background-color: #98971a;
 }
